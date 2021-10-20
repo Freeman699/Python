@@ -1,1 +1,1 @@
-TODO: write a readme file.
+First steps into Python
