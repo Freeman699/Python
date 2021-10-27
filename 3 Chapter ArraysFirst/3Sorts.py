@@ -1,0 +1,20 @@
+countries = ["Netherlands", "Finland", "United States of America", "Sweden", "Switzerland"]
+print(countries)
+print(sorted(countries))
+print(countries)
+print(sorted(countries, reverse=True))
+print(countries)
+countries.reverse()
+print(countries)
+countries.reverse()
+print(countries)
+countries.sort()
+print(countries)
+countries.sort(reverse=True)
+print(countries)
+
+guests = ["John von Neumann", "Lev Landau", "Richard Feynman"]
+guests.insert(0, "Enrico Fermi")
+guests.insert(2, "Marie Curie")
+guests.append("Niels Bohr")
+print(len(guests))
