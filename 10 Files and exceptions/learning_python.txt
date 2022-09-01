@@ -1,0 +1,4 @@
+In Python you can create and solve your problems
+In Python you can crash your programs because of one forgotten \t
+In Python you can't do memory leaks, or can? 
+In Python you can everything!

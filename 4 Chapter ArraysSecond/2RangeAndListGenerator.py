@@ -25,5 +25,5 @@ for value in range (1,11):
     сubic_numbers.append(value**3)
 print(сubic_numbers)
 
-generator_cubic_numbers = [value**3 for value in range(1,11)]
+generator_cubic_numbers = [x**3 for x in range(1,11)]
 print(generator_cubic_numbers)
