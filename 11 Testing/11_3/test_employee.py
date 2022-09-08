@@ -1,4 +1,3 @@
-from email.policy import default
 import unittest
 from  employee import Employee
 
