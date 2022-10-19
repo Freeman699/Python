@@ -9,5 +9,10 @@ class Settings():
         self.bg_color = (40, 40, 80)
         self.full_screen_mode = True  # NOT IMPLEMENTED / True by default
         # Настройки корабля
-        self.ship_speed = 0.6
+        self.ship_speed = 1
         self.boost_multiplier = 2
+        # Настройки снарядов
+        self.bullet_speed = 1.2
+        self.bullet_width = 3
+        self.bullet_height = 15
+        self.bullet_color = (200, 200, 200)

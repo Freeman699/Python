@@ -8,8 +8,12 @@ class Ship:
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()
-        # Загружает изображение корабля и получает прямоугольник.
-        self.image = pygame.image.load('./img/main_ship.bmp')
+        # Загружает изображение корабля, изменяет размер и получает прямоугольник.
+        scaled_img = pygame.transform.scale(
+            pygame.image.load('./img/main_ship.png'),
+            (self.settings.screen_width * 0.03, self.settings.screen_height * 0.05)
+            )
+        self.image = scaled_img
         self.rect = self.image.get_rect()
         # Каждый новый корабль появляется у нижнего края экрана.
         self.rect.midbottom = self.screen_rect.midbottom
@@ -31,7 +35,7 @@ class Ship:
 
         if self.moving_right and self.rect.right < self.screen_rect.right:
             self.x += new_ship_speed
-        elif self.moving_left and self.rect.left > 0:
+        if self.moving_left and self.rect.left > 0:
             self.x -= new_ship_speed
         # Обновление атрибута rect на основании self.x
         self.rect.x = self.x
