@@ -9,9 +9,12 @@ class Ship:
         self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()
         # Загружает изображение корабля, изменяет размер и получает прямоугольник.
+        scale_multiplier = 0.04
         scaled_img = pygame.transform.scale(
             pygame.image.load('./img/main_ship.png'),
-            (self.settings.screen_width * 0.03, self.settings.screen_height * 0.05)
+                (self.settings.screen_width * scale_multiplier,
+                self.settings.screen_height * (scale_multiplier * 2)
+                )
             )
         self.image = scaled_img
         self.rect = self.image.get_rect()
@@ -24,6 +27,11 @@ class Ship:
         self.x = float(self.rect.x)
         # Флаг ускорения скорости корабля
         self.speed_boost = False
+
+    def center_ship(self):
+        """Размещает корабль в центре нижней стороны."""
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
 
     def update(self):
         """Обновляет позицию корабля с учетом флагов."""
